@@ -7,6 +7,7 @@ How to run it ?
 
 ```bash
 npm i
+npm i deno
 ```
 ```bash
 cd fast-check
