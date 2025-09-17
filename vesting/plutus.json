@@ -1,0 +1,75 @@
+{
+  "preamble": {
+    "title": "long/vesting",
+    "description": "Aiken contracts for project 'long/vesting'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.21-alpha+unknown"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "vesting.vesting",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/vesting~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "compiledCode": "5901460100003232323232323232222325333007323232533300a3370e900100089919299980619800980118050039bae3005300a00914a22a666018660026004601400e6eb8c040c044c044c0280244cc88c8c94ccc040cdc3a4004002266e2400cdd6980a18070010a50300e0013004300c3004300c00230103011301130113011301130113011300a3002300a007375a60046014012294088c8c8cc004004008894ccc04c00452809919299980919b8f00200614a2266008008002602c0046eb8c050004dd61808980918091809180918091809180918091805801118078008a503008001300130060032300c300d00114984d958c94ccc01ccdc3a40000022646464646464a66602060240042930b1bae30100013010002375c601c002601c0046eb4c030004c01401058c01400c8c014dd5000918019baa0015734aae7555cf2ab9f5742ae881",
+      "hash": "e4697c8faadb8d9dacbf32caad8918ca65f01c27d254d75e2ce7fb3a"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "Void": {
+      "title": "Unit",
+      "description": "The nullary constructor.",
+      "anyOf": [
+        {
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    },
+    "vesting/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "lock_until",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "benificiary",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
