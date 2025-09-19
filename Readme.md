@@ -18,7 +18,7 @@ Its show below:
 PS D:\lucid\fast-check> deno test fast-check.ts --allow-all
 Check file:///D:/lucid/fast-check/fast-check.ts
 running 1 test from ./fast-check.ts
-Property test: Pay to address with random amounts ...
+Property test: Pay to address with random amounts ....
 ------- output -------
 Transaction hash: 5ab3b70db271bd21b6fbde54ede0f1225978e6f33f527a92c98798c9ffc1a10b
 Transaction hash: dce5dd9162c8e2b629f5700ab12e3b655cfd61ce3da19ee927b71f03200486ff
